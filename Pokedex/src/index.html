@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="./static/pokeball.png" />
+    <title>Projet Pokédex</title>
+    <script src="https://kit.fontawesome.com/c88302425e.js" crossorigin="anonymous"></script>
+    <link id="theme-style" rel="stylesheet" href="./style/main.scss">
+
+</head>
+
+<body>
+
+    <header>
+        <img id="image-logo" src="./static/pokedex.png" alt="Logo Pokédex" />
+    </header>
+
+    <div class="page">
+
+        <div class="barre-gauche">
+            <div class="recherche">
+                <h3><i class="fa fa-search"></i> Search by name</h3>
+                <input type="text" class="input-rech" placeholder="Charizard ..." id="filter">
+            </div>
+
+            <div class="trier-par">
+                <h3><i class="fa fa-sort-amount-down-alt"></i> Sort by</h3>
+                <select class="tri" id="select_tri">
+                    <option value="number"> Number </option>
+                    <option value="name_a-z"> Name A-Z </option>
+                    <option value="name_z-a"> Name Z-A </option>
+                </select>
+            </div>
+
+            <div class="liste-pokemon">
+                <h3><i class="fas fa-heart"></i> Favorites Pokemons</h3>
+                <ul id="fav_list_poke">
+
+                </ul>
+                <h3><i class="fa fa-bars"></i> List of Pokemons</h3>
+                <ul id="list_poke">
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="principal">
+            <div class="ajout-favoris">
+                <input type="checkbox" id="fav_poke">
+                <label for="fav_poke" class="fa fa-heart fa-3x"></label>
+            </div>
+
+            <div class="align-img">
+                <img id="img_poke">
+
+                <div class="informations">
+                    <h2 id="nom_poke"></h2>
+                    <ul id="desc_poke">
+                    </ul>
+                </div>
+            </div>
+
+            <div class="stats">
+                <h2>Base Stats</h2>
+                <ul id="stats_poke">
+
+                </ul>
+            </div>
+
+            <div class="move">
+                <h2>Move List</h2>
+                <ul id="move_poke">
+                </ul>
+            </div>
+
+            <div id="modalAbil" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2 id="stat_abilitie"></h2>
+                  <p id="typeAbil"></p>
+                  <p id="categAbil"></p>
+                  <p id="powerAbil"></p>
+                  <p id="accuAbil"></p>
+                  <p id="ppAbil"></p>
+                  <p id="descAbil"></p>
+                </div>
+              
+              </div>
+
+        </div>
+
+    </div>
+
+    <footer>&copy; Examen de Gestion de Projet - LAMBERT Flavien | GIRON Maxence</footer>
+
+</body>
+
+</html>
